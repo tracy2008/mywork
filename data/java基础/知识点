@@ -1,0 +1,73 @@
+1、搭建maven环境：
+
+	工具:
+		eclipse
+		apache-maven
+		eclipse-maven 插件
+		maven-jetty插件
+
+2、创建maven项目
+
+	创建web项目
+	创建java项目
+
+3、编译、发布
+
+4、日志管理：采用方案slf4j+log4j
+	
+	1)引入jar包：
+				slf4j-api.jar
+				log4j.jar
+				slf4j-log4j12.jar
+				
+	2)创建log4j.properties文件：配置日志输出格式
+
+5、activeMQ管理：
+	
+	1）下载  apache-activemq服务
+	
+	2）引入  activemq-all.jar
+	
+	3）启动activeMQ服务
+	
+	4）开发 consumer 和 producer
+	
+		consumer:
+					ConnectionFactory 连接工厂
+					Connection 创建连接、启动
+					Session	创建会话
+					Destination 创建消息队列
+					MessageConsumer	创建消费者
+					通过messageConsumer.receive接收消息 并给与处理
+		producer：
+					ConnectionFactory 连接工厂
+					Connection 创建连接、启动
+					Session	创建会话
+					Destination 创建消息队列
+					MessageProducer	创建生成者
+					通过messageProducer.send发送消息 并给与处理
+					
+6、springMVC  在web项目基础上赋予springMVC特性
+
+	1）配置监听器ContextLoaderListener
+	2）配置分发器DispatcherServlet 
+					
+7、springMVC原理  源码解读
+
+8、数据库 功能单一化     oracle mysql  nosql mongodb 非结构化数据库 非核心化数据
+
+成本：
+
+mysql  开源
+
+数据迁移  业务不能停 数据一致性 
+
+业务拆分  互联网公司上百集群  mysql轻量级 有优势 mysql方便分布式存储
+
+互联网发展趋势  开源
+
+
+9、远程请求
+				
+	
+	

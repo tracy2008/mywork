@@ -1,0 +1,32 @@
+1、回调
+	阻塞实例
+	非阻塞实例
+	
+2、事件驱动
+	EventEmitter 对象
+	
+	addListener(event, listener)
+	
+3、buff缓存对象
+
+4、stream对象  管道   链式流
+
+5、模块系统   exports  require  接口  对象
+
+6、nodejs函数  函数作为参数 匿名函数  http.createServer 
+
+7、路由  服务器
+
+8、全局对象  global  全局函数  setTimeout(cd, long)  setInterval(cd, long)
+
+9、常用工具：
+	util.inherits 集成原型  prototype
+	util.inspect  将对象转为字符串输出  日志打印
+	
+10、文件系统  fs
+
+11、get、post请求
+
+12、web模块  服务端   客户端
+
+13、express框架  中间件响应http请求  路由表执行不同的请求动作  向模板传递参数动态渲染html页面

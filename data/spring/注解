@@ -1,0 +1,49 @@
+1、@controller	
+
+定义一个控制器
+控制器交给spring管理：
+方式：
+扫描
+
+2、@RequestMapping 
+
+属性：限制作用
+method		请求方式
+headers		头部限制
+
+支持返回的类型:
+ModelAndView对象
+Model对象以及Map
+View对象
+String
+void
+@ResponseBody	标识的返回值都会被转换之后写到HttpServletResponse中
+
+
+标识映射处理器
+
+作用在controller上，相对路径
+作用在方法上，绝对路径
+
+3、@RequestParam  绑定HttpServletRequest请求参数  默认属性参数required=true
+
+4、@cookieValue		绑定cookie的值到controller方法
+
+5、@RequestHeader	绑定HttpServletRequest头信息到controller方法
+
+6、@ModelAttribute  @SessionAttributes  传递和保存数据
+
+7、@Compnonent	通用
+
+8、@Repository	数据层
+
+9、@service		业务层
+
+10、@controller	表现层	对应action	
+
+11、@Scope("prototype")  原型 默认是singleton
+
+12、@resource	默认自动按name匹配bean
+
+13、@Autowired	默认自动按type匹配bean
+

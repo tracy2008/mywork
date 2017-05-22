@@ -1,0 +1,18 @@
+Hessian:轻量级remoting onhttp工具，提供RMI功能，相比webservice更简单，更快；
+采用二进制RPC协议，适合发送二进制数据；
+
+基于hessian项目开发时，注意：
+
+java服务器端：
+
+包含hessian的jar包；
+设计一个接口，用来给客户端调用；
+实现该接口的功能；
+配置web.xml，配好相应的servlet；
+由于使用二进制RPC协议传输数据，对象必须进行序列化，实现Serializable接口；
+对于复杂对象可以使用Map的方法传递；
+
+客户端：
+
+包含hessian的jar包；具有和服务器端结构一样的接口；
+利用HessianProxyFactory调用远程接口；

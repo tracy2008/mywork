@@ -1,0 +1,20 @@
+spring封装的线程池管理器：
+
+spring-context
+
+ org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
+ 
+ java原生：
+ 
+ Executor   ExecutorService
+
+
+线程池实现原理
+
+线程池管理器：threadpool  创建，销毁，添加新任务
+
+工作线程  poolworker  线程池中的线程，没有任务时处于等待状态，可以循环执行任务
+
+任务接口  task  每个任务要实现该接口，以供工作线程调度执行
+
+任务队列  缓冲机制  存放没有处理的任务

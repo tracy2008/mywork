@@ -1,0 +1,15 @@
+Log4j具有5种级别：
+
+debug：调试情形；
+info：运行过程；
+warn：潜在错误情形；
+error:发生错误，但仍然不影响系统的继续运行；
+
+优先级从高到低：error、warn、info、debug；打印的时候高于设置的优先级的都会打印；
+
+使用注意：
+
+1、打印日记的时候，先做条件判断：isDebugEnable()、isInfoEnabled()、isTraceEnabled()
+
+原因：当系统loglevel设置高于debug或info或trace时，虽然系统不会打印出这些级别的日志，但是每次还是会拼接参数字符串，
+影响系统性能；所以在打印之前先做判断；

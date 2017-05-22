@@ -1,0 +1,14 @@
+1、springMVC配置
+	
+	上下文 监听器  servlet 
+	
+	
+2、url-pattern：
+
+	/和/*的区别：
+		
+		/*  所有的请求都会交给servlet处理,该servlet重写了所有的servlet
+		
+		/   *.jsp请求不会交给servlet
+		
+

@@ -1,0 +1,7 @@
+本机启动两个tomcat
+
+1、不要设置CATALIN_HOME
+2、修改server.xml文件
+3、http访问端口 默认是8080  改成8081
+4、修改shutdown端口（在server.xml中，默认是8005 改成8055）
+5、修改tomcat端口 默认是8009  改成 8099

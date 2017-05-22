@@ -1,0 +1,17 @@
+
+
+并发控制
+
+	目的：线程安全  数据准确
+	
+	手段：同步synchronized  volatile（程度较轻的synchrobized） threadLock(空间换时间)
+	
+	
+	volatile  不稳定  线程共享的 让变量每次使用的时候 都是从主存中获取，而不是从各个线程的工作内存  不能保证并发的正确性，因为不能保证线程执行的有序性
+			  使用场景：对变量的写操作不依赖于当前值 即不能用作计数器
+			  
+	锁synchronized : 对象被调用后会锁住，其他线程要调用必须等待该对象锁被释放
+	   synchronized 配合 wait  notify  使用  阻塞队列
+	   
+	 ThreadLocal 为每个线程提供变量的独立副本
+	   

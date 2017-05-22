@@ -1,0 +1,3 @@
+系统架构：
+
+web端和app端，通过hessian通信

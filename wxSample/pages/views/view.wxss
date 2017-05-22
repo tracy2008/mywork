@@ -1,0 +1,13 @@
+/* view.wxss */
+.flex-item bc_green{
+  background-color: green
+}
+
+
+.flex-item bc_red{
+  background-color: red
+}
+
+.flex-item bc_blue{
+  background: blue
+}

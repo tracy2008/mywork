@@ -1,0 +1,57 @@
+hadoop：提供一个稳定的共享存储和分析系统； 文本搜索库
+存储由HDFS实现，分析由MapReduce实现，
+
+关系型数据库系统
+
+
+MapReduce:适合处理需要分析整个数据集的问题
+
+高性能计算  网络计算：将作业分配给一个机器集群，这些集群访问共享文件系统
+
+命名规则：简短、易发音、没有太多意义、不会被用于别处
+
+
+MapReduce：数据处理的编程模型
+
+Unix Tools分析数据
+
+map  reduce
+
+MapReduce程序开发
+
+学习路线：
+
+hadoop家族产品：
+
+apahce Hadoop：分布式计算开源框架，提供一个分布式文件系统子项目（HDFS）和支持MapReduce分布式计算的软件架构；
+
+Apache Hive：基于hadoop的一个数据仓库工具，可将结构化的数据文件映射为一张数据库表，通过类sql语句快速实现简单的MapReduce统计；数据仓库统计分析
+
+apache Pig：基于hadoop的大规模数据分析工具，提供sql-like语言  pig latin，该语言的编译器会把类sql的数据分析请求转换为一系列经过优化处理的MapReduce运算；
+
+apache Hbase：高可靠性、高性能、面向列、可伸缩的分布式存储系统；
+
+apache Sqoop：将hadoop与关系型数据库中的数据相互转移的工具；
+
+apache Zookeeper：
+
+
+hadoop:
+
+1、用maven构建hadoop项目；
+
+2、hadoop安装
+
+3、hadoop编程调用hdfs
+
+4、海量web日志分析  用hadoop提取kpi统计指标
+
+5、用hadoop构建电影推荐系统；
+
+6、创建hadoop的母体虚拟机
+
+7、克隆虚拟机增加hadoop节点
+
+8、R语言为hadoop注入统计血脉
+
+9、

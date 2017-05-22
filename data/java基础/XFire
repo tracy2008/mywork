@@ -1,0 +1,8 @@
+xfire客户端调用流程：
+
+创建服务模型：服务接口信息、操作信息、绑定信息，有服务工厂serviceFactory完成；
+
+创建client实例：可以手工创建，也可通过XFireProxyFactory创建，初始化过程中在out拦截器堆栈中增加一个OutMessageSender拦截器，该拦截器最终负责将服务调用通过http发送到服务提供者并返回处理结果；
+
+创建服务代理：XFireProxy,通过invoke方法来执行，最终执行服务的是client；
+

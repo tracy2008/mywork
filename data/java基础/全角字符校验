@@ -1,0 +1,15 @@
+全角字符校验：
+在输入密码的时候，一般不能是全角字符
+
+
+全角字符：一个字符占用两个标准字符位置；汉字字符和规定了全角的英文及国际标准中的图形符号和特殊字符都是全角字符；
+半角字符：一个字符占用一位；
+
+因此在java中校验全角字符可以通过校验位数是否一致；
+
+public static boolean check(String str){
+		if(str == null){
+			return false;
+		}
+		return !(str.length()==str.getBytes().length);
+	}

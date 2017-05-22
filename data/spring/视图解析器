@@ -1,0 +1,20 @@
+ViewResolver：将逻辑上的视图名称解析成一个真正的视图
+
+View：
+
+ModelAndView
+
+视图解析器：
+
+AbstractCachingViewResolver：抽象类 缓存解析，每次解析的时候，先看有没有缓存，有则直接取，没有再新建；
+
+UrlBasedViewResolver：继承AbstractCachingViewResolver,提供一种拼接url的方式来解析式图，提供前缀和后缀，支持重定向和跳转；
+		使用时必须指定viewClass，表示解析成哪种视图，一般为InternalResourceView
+		
+InternalResourceViewResolver：继承URLBasedViewResolver；内部资源视图解析器，它将返回的视图名称解析成一个InternalResourceView对象，
+	InternalResourceView把controller处理返回的模型属性存放到对应的request中，然后通过requestDispatcher在服务器端把请求forword到目标url；
+	
+FreeMarkerViewResolver：
+	
+	
+XmlViewResolver：继承AbstractCachingViewResolver

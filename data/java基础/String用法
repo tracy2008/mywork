@@ -1,0 +1,8 @@
+String.valueOf(str)和(String)str的区别
+
+1、一个是类型转换，一个是强制类型转换；
+2、String.valueOf()有多个重载方法，参数可以是任意类型；
+3、强制转换，如果str不是String类型，将会出错；
+4、强制类型转换效率高
+
+使用情况：当确定str是字符串时，通过强制类型转换；当无法保证str是否是字符串类型时，采用String.valueOf()

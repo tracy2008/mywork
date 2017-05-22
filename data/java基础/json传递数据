@@ -1,0 +1,4 @@
+传递json数据类型给ajax回调函数：
+
+response.getWriter().write(json.toString())
+json.write(response.getWriter())

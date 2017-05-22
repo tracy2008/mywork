@@ -1,0 +1,45 @@
+ibatis的sqlMap配置文件：sqlMapContfig.xml
+
+<sqlMapConfig>
+	<properties resource="db.properties"/>  <!--属性文件，在web服务器启动的时候要加载这个文件-->
+	<setting 
+	cacheModelsEnable="true/false"   <!--ibatis的高速缓存，将近期使用过的数据保存到内存中-->
+	lazyLoadingEnabled="true/false" <!--是否延迟加载（只加载必要信息而推迟其他未明确请求数据的技术），默认true-->
+	enhancementEnabled="true/false" <!--是否使用cglib中那些已经优化的类来提高延迟加载的性能-->
+	useStatementNameSpaces="true/false" <!--是否使用命名空间，这里的命名空间指的是映射文件中，sqlMap的属性namespace，如果使用，则在java程序调用的时候需要加上（命名空间+ID）来访问，默认false-->
+	maxRequests="30" maxSessions="20" maxTransactions="10" <!--已基本废弃-->
+	/>
+
+	<sqlMap resource="com/login/user.xml"></sqlMap>  <!--sql与对象映射文件,这里会有多个文件，每个表对应一个-->
+
+</sqlMapConfig>
+
+sqlMap节点配置：
+
+<sqlMap namespace="user">  //命名空间，在此空间外引用此空间的元素，需要加上空间名
+<typeAlias alias="userDTO" type="com.login.entity.UserDTO"/>   //实体别名，如果用到全名的地方可用别名代替，受命名空间限制
+
+//插入操作，对于自增主键的表，插入可以不配置插入的主键列，否则必须
+<insert id="insertUser" parameterClass="userDTO">
+	<selectKey resultClass="long" keyProperty="id">
+	select seq_test.nextval from dual
+	</selectKey>
+	insert into...
+</insert>
+
+//插入入参类型：parameterClass="类别名"
+//查询语句入参：可以设定类别名，也可以设定为map，也可以设定为ibatis支持的原生类型（如String、int、long），当只有一个原生类型入参时，在sql中用value关键字引用
+//map类型入参，任何入参类型都可以转换为map类型，因为ibatis仅接受一个入参，当几个参数分布在不同对象中的时候，将这些对象的属性（或对象本身）组装到map中，
+//一次性传给sql语句
+
+//返回值参数类型：resultClass="类别名"和resultMap="dataMap"
+1、当结果集列名和类属性名完全对应的时候，应使用resultClass指定查询的结果集类型，有些列名不对应可以在sql中使用as
+
+
+
+
+
+注：
+1、使用ibatis需要jar包：
+	ibatis-common-2.jar
+	ibatis-sqlMap-2.jar

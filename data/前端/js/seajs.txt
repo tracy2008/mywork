@@ -1,0 +1,8 @@
+seajs:
+
+实现模块化和按模块加载
+
+easjs.use('./main')：在页面中加载任意模块
+
+//记载mian模块完成时，执行指定回调函数
+seajs.use('./main',function(main){mian.init();})

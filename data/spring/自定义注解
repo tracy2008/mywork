@@ -1,0 +1,28 @@
+实现方式：
+
+  aop
+  拦截器
+  
+  
+  
+  aspect 切面
+  joinpoint  连接点
+  advice 通知
+  pointcut 切入点  @execution  @within @target  @annotation
+  targetObj 
+  
+  
+  
+  
+  注解+aop  
+  
+	1、被切入的类必须交给spring容器管理，自己new的实例不会进入切面
+	
+	
+	
+过滤器：servlet中的概念  依赖servlet容器  对所有资源起作用  不可以访问资源
+
+拦截器：struct2中的概念  不依赖servlet容器  只对action起作用  可以访问资源上下文   具有侵入式
+
+执行顺序：过滤器前 》 拦截器前 》 action处理 》 拦截器后 》 过滤器后
+

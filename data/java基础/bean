@@ -1,0 +1,7 @@
+spring容器中初始化bean和销毁bean前所做的操作定义方式有三种：
+
+1、注解方式  @PostConstruct和@PreDestroy方法实现；
+
+2、在xml中定义bean的时候定义init-method和destroy-method；
+
+3、通过实现InitializingBean和DisposableBean接口
